@@ -2,7 +2,6 @@ from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
-import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import io
 from PIL import Image
@@ -12,6 +11,7 @@ import requests_cache
 import pandas as pd
 from retry_requests import retry
 import joblib
+import tensorflow  as tf
 
 final_prediction = {
     'Disease Prediction': "Upload An Image First",
